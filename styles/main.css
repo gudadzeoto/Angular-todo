@@ -1,0 +1,8 @@
+.actions a {
+	text-decoration: none;
+	color: blue;
+}
+
+.actions .delete {
+	color: red;
+}
