@@ -17,20 +17,17 @@
 
 		<div ng-controller="actionsCtrl" class="list">
 			<div class="add text-center m-3">
-				<a href="" ng-click="add()" class="btn btn-success">+ New Task</a>
+				<a href="#" ng-click="add()" class="btn btn-success">+ New Task</a>
 			</div>
-			<div class="item row" ng-repeat="todo in todos" ng-init="todo.completed = false"
-				ng-class="{'item-editing': editing, 'completed': todo.completed}">
-
+			<div class="item row" ng-repeat="todo in todos" ng-class="{'item-editing': editing, 'completed': todo.completed}">
 				<div class="col-md-5 offset-3">
-					<input ng-model="todo.completed" type="checkbox">
-					<span ng-click="todo.completed = !todo.completed"></span>
+					<input ng-model="todo.completed" type="checkbox" ng-click="check()">
 					<label ng-hide="editing" ng-click="editing = true" class="editing-label">{{todo.name}}</label>
-					<input ng-blur="editing = false" ng-show="editing"
-						ng-model="todo.name" class="editing-label" type="text">
+					<input ng-blur="editing = false; edit()" ng-show="editing" ng-model="todo.name" class="editing-label"
+						type="text">
 				</div>
 				<div class="col-md-3 actions">
-					<a href="" ng-click="delete(todo, $index)" class="delete">delete</a>
+					<a href="#" ng-click="delete($index)" class="delete">delete</a>
 				</div>
 			</div>
 		</div>
