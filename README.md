@@ -9,3 +9,6 @@ It's written in `AngularJS` and uses `Bootstrap` framework.
 ## Deploy
 
 Clone repository and run `index.html` in your web browser.
+
+
+You can add reminder and time for all the task then app will be more helpful for the user.
