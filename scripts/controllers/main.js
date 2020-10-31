@@ -3,18 +3,37 @@ angular.module("todoApp")
     $scope.todos = dataService.get();
 
     $scope.add = function () {
+        var index = dataService.get().length + 1;
         var todo = {
-            name: 'This is a new todo.'
+            name: 'This is a new todo. #' + index
         };
+        dataService.add(todo);
         $scope.todos.unshift(todo);
     };
 
-    $scope.delete = function (todo, $index) {
-        dataService.delete(todo);
+    $scope.edit = function () {
+        $scope.save();
+    };
+
+    $scope.delete = function ($index) {
         $scope.todos.splice($index, 1);
+        $scope.save();
+    };
+
+    $scope.check = function () {
+        $scope.save();
     };
 
     $scope.save = function () {
-        dataService.save($scope.todos);
+        var todos = [];
+
+        $scope.todos.map(function (currentTodo) {
+            todos.push({
+                name: currentTodo.name,
+                completed: currentTodo.completed || false
+            });
+        });
+
+        dataService.save(todos);
     };
 });
