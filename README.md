@@ -1,7 +1,7 @@
 # My TODO List:
 
 **
-This project is being done to implement a simple screen with TODO list using Angular.js 💚💜 by Guilherme A Dias 💚💜**
+This project is being done to implement a simple screen with TODO list using Angular.js 💚💜💚💜**
 
 ![Capa](https://thecodingpie.com/media/media/thumbnail_Ag03ULz.png)
 
