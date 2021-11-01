@@ -8,7 +8,7 @@ angular.module("todoApp")
         var todos = this.get();
         todos.unshift(todo);
         this.save(todos);
-        console.log(todo.name + ' has been added');
+        console.log(`${todo.name} has been added`);
     };
 
     this.delete = function (todo) {
@@ -19,11 +19,11 @@ angular.module("todoApp")
         });
 
         this.save(todos);
-        console.log(todo.name + ' has been deleted');
+        console.log(`${todo.name} has been deleted`);
     };
 
     this.save = function (todos) {
         localStorage.setItem('todos', JSON.stringify(todos));
-        console.log('there is ' + todos.length + ' todos');
+        console.log(`there is ${todos.length} todos`);
     };
 });
