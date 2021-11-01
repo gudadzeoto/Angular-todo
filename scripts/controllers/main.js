@@ -24,6 +24,10 @@ angular.module("todoApp")
         $scope.save();
     };
 
+    $scope.update = function () {
+        $scope.update();
+    };
+    
     $scope.save = function () {
         var todos = [];
 
