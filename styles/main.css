@@ -1,3 +1,7 @@
 .actions .delete {
 	color: red;
 }
+
+.actions .edit {
+	color: blue;
+}
